@@ -38,15 +38,27 @@ namespace C_Note
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Close all forms except Form2
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form != this)
-                    form.Close();
-            }
+            // Prompt a confirmation message
+            DialogResult result = MessageBox.Show("Are you sure you want to close?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            // Exit the application
-            Application.Exit();
+            // Check the user's response
+            if (result == DialogResult.Yes)
+            {
+                // Close all forms except Form2
+                foreach (Form form in Application.OpenForms)
+                {
+                    if (form != this)
+                        form.Close();
+                }
+
+                // Exit the application
+                Application.Exit();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
