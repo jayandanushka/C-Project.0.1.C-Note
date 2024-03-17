@@ -52,7 +52,7 @@ namespace C_Note
             // Stop the timer to prevent multiple forms from opening
             timer1.Stop();
 
-            // Open new form
+            // Open new Changes9
             Form2 newForm = new Form2();
             newForm.Show();
 
