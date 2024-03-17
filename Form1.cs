@@ -52,11 +52,11 @@ namespace C_Note
             // Stop the timer to prevent multiple forms from opening
             timer1.Stop();
 
-            // Open new Changes0090
+            // Open new Form
             Form2 newForm = new Form2();
             newForm.Show();
 
-            // Close the current form
+            // Close the current Form
             this.Hide(); // Use Hide() to hide the form without closing it
         }
     
